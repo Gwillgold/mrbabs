@@ -1,0 +1,148 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <link rel="stylesheet" href="{% static '/css/base.css' %}">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+      <!-- Google Fonts -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+      <!-- Bootstrap core CSS -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Material Design Bootstrap -->
+      <link rel="stylesheet" href="{% static '/css/base.css' %}">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="/index.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Kurale&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+      <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Praise&family=Road+Rage&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Praise&display=swap" rel="stylesheet">
+      <script src="https://unpkg.com/scrollreveal"></script>
+    <title>{% block title%} {% endblock%}</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <section>
+        <nav class="navbar navbar-expand-lg  fixed-top navbar-dark " id="myNav" style="background-image: linear-gradient(to right, #8b1e5c, #792d68, #65376f, #513e6f, #41426b, #404f73, #425b79, #4a677d, #608292, #799ca6, #96b8bb, #b6d3d1); ">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#home"> <strong><h1>G-will<span>Flows</span></h2></strong></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item ">
+                        <a class="link mx-lg-3 my-lg-2 text-uppercase rounded" href="#home">Home </a>
+                      </li>
+                <li class="nav-item">
+                        <a class="link mx-lg-3 my-lg-2 text-uppercase rounded" href="#about">About</a>
+                <li class="nav-item">
+                            <a class="link mx-lg-3 my-lg-2 text-uppercase rounded" href="#work-experience">Experience</a>
+                          </li>
+                <li class="nav-item">
+                            <a class="link mx-lg-3 my-lg-2 text-uppercase rounded" href="#works">Works</a>
+                          </li>
+
+                <li class="nav-item">
+                 <a class="link mx-lg-3 my-lg-2 text-uppercase rounded" href="#contact">Contact</a>
+                 </li>          
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
+    </section>
+
+    <!-- navbar end -->
+    
+
+
+
+
+
+
+       <!-- ======blockmain ===== -->
+          
+        {% block main %}
+
+
+         {% endblock %}
+
+       <!-- ======blockmain end =====  -->
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+    <script>
+        const navbar = document.querySelector('#myNav');
+        setTimeout(
+              window.onscroll = () => {
+                    if (window.scrollY > 600) {
+                          navbar.classList.add('scrolled');
+                    } else {
+                          navbar.classList.remove('scrolled');
+                    }
+              },3000
+        );
+
+        ScrollReveal().reveal('.about-me' , { duration: 1500 }, { easing: 'ease-in' }, {reset: true});
+        ScrollReveal().reveal('.card-holder' , { duration: 1500 }, { easing: 'ease-in' }, {reset: true});
+        ScrollReveal().reveal('.my-works' , { duration: 1500 }, { easing: 'ease-in' }, { reset: true });
+        ScrollReveal().reveal('.work-experience-location' , { duration: 1500 }, { easing: 'ease-in' }, {reset: true});
+        ScrollReveal().reveal('.work-experience-img' , { duration: 1500 }, { easing: 'ease-in' }, {reset: true});
+        ScrollReveal().reveal('.contact' , { duration: 1500 }, { easing: 'ease-in' }, {reset: true});
+        ScrollReveal().reveal('.social' , { duration: 1500 }, { easing: 'ease-in' }, {reset: true});
+  </script>
+  
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+  <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
